@@ -7,8 +7,16 @@
 // e.g. f("hello world"); // Hello World
 // e.g. f("BACON BROCOLI"); // Bacon Brocoli
 
+const longestWord = require("./fundamentals-3.9");
+
 function makeIntoTitle(sentence) {
-  // Your code here
+  let phrase = sentence.toLowerCase();
+  let arr = phrase.split(" ");
+  let newArr = arr.map(element =>{
+    return element.charAt(0).toUpperCase() + element.slice(1)
+  });
+  let result = newArr.join(" ");
+  return result;
 }
 
 // Part 2 - Test
