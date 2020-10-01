@@ -9,12 +9,12 @@
 
 function sum(arr) {
   let count = 0;
-  let isNum = arr.filter(element => {
+  let isNotNum = arr.filter(element => {
     if(typeof(element) !== 'number'){
       return element;
     }
   })
-  if (isNum  > 0){
+  if (isNotNum.length  > 0){
     return undefined
   }
   arr.forEach(element => {
